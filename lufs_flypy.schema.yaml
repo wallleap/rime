@@ -22,7 +22,7 @@ switches:
   - name: ascii_punct
     states: [。，, ．，]
   - name: emoji_suggestion
-    # reset: 1
+    reset: 1
     states: ["🈚️️", "🈶️"]
 
 engine:
@@ -56,7 +56,7 @@ engine:
 emoji_suggestion:
   opencc_config: emoji.json
   option_name: emoji_suggestion
-  tips: false
+  tips: all
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba/
@@ -87,10 +87,10 @@ speller:
     # - derive/^fu$/hu/ # hu -> fu
 
     # 韵母部分
-    - derive/([^iu])([a])n$/$1$2ng/ # ang -> an
-    - derive/([^iu])([a])ng$/$1$2n/ # an -> ang
-    - derive/([e])n$/$1ng/ # eng -> en
-    - derive/([e])ng$/$1n/ # en -> eng
+    # - derive/([^iu])([a])n$/$1$2ng/ # ang -> an
+    # - derive/([^iu])([a])ng$/$1$2n/ # an -> ang
+    # - derive/([e])n$/$1ng/ # eng -> en
+    # - derive/([e])ng$/$1n/ # en -> eng
     # - derive/([i])n$/$1ng/ # ing -> in
     # - derive/([i])ng$/$1n/ # in -> ing
     # - derive/([i])an$/$1ang/ # iang -> ian
